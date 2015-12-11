@@ -30,10 +30,10 @@ angular.module('app.routes', [])
     
       
         
-    .state('cadastroDeSituaçãO', {
+    .state('cadastroDeSit', {
       url: '/cadsit',
-      templateUrl: 'templates/cadastroDeSituaçãO.html',
-      controller: 'cadastroDeSituaçãOCtrl'
+      templateUrl: 'templates/cadastroDeSit.html',
+      controller: 'cadastroDeSitCtrl'
     })
         
       

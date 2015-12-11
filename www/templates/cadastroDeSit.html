@@ -1,19 +1,30 @@
-<ion-view style="" title="Cadastro de Situação">
-    <ion-content class="has-header has-footer" scroll="false" overflow-scroll="true" padding="'true'">
-        <h1 style="">Heading</h1>
-        <form style="" class="list">
-            <label style="" class="item item-select">
-                <span class="input-label">Local</span>
-                <select></select>
-            </label>
-            <div style="" class="button-bar">
-                <button style="" class="button button-positive button-outline button-block button-large button-full">Oportunidade de Melhoria</button>
-                <button style="" class="button button-energized button-outline button-block button-large button-full">Situação de Risco</button>
-            </div>
-            <div style="height: 100px;" class="spacer"></div>
-            <label style="" class="item item-input">
-                <span class="input-label">Text</span><textarea placeholder=""> </textarea>
-            </label>
-        </form>
-    </ion-content>
-</ion-view>
+        <ion-view style="" title="Cadastro de Situação">
+            <ion-content class="has-header has-footer" scroll="false" overflow-scroll="true" padding="'true'">
+                <form style="" class="list">
+                <label class="item item-input item-select">
+                  <div class="input-label">
+                    Local
+                  </div>
+                  <select>
+                  <option ng-repeat="local in Locais" >
+                            {{ local.nome }}
+                          </option>
+                  </select>
+               </label>
+               <div class="row">
+                 <div class="col col-50">
+                     <ion-radio ng-model="choice" ng-value="Melhoria">Oportunidade de Melhoria</ion-radio>
+                 </div>
+                 <div class="col col-50">
+                     <ion-radio ng-model="choice" ng-value="Risco">Situação de Risco</ion-radio>
+                 </div>
+             </div>  
+                    <div style="height: 100px;" class="spacer"></div>
+
+                    <label style="" class="item item-input">
+                        <span class="input-label">Descrição</span>
+                        <textarea placeholder="" rows="10"> </textarea>
+                    </label>
+                </form>
+            </ion-content>
+        </ion-view>
